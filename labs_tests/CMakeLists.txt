@@ -5,7 +5,7 @@ FetchContent_Declare(gtest
 )
 # configure build of googletest
 set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-set(BUILD_GMOCK OFF CACHE BOOL "" FORCE)
+set(BUILD_GMOCK ON CACHE BOOL "" FORCE)
 FetchContent_MakeAvailable(gtest)
 
 add_executable(
@@ -25,5 +25,5 @@ gtest_discover_tests(unit_tests
   PROPERTIES
     LABELS "unit"
   DISCOVERY_TIMEOUT  # how long to wait (in seconds) before crashing
-    240
+    280
   )
